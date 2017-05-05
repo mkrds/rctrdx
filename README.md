@@ -1,1 +1,1 @@
-# rctrdx
+Simple ToDO with react and redux
