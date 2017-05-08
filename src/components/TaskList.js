@@ -1,9 +1,9 @@
 import React from 'react';
-// import '../css/App.css';
 
 function TaskList(props) {
   return (
     <div className="App">
+      <h1>{props.value}</h1>
     </div>
   );
 }
