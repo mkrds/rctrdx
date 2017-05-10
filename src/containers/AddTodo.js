@@ -6,17 +6,19 @@ import { addTodo } from '../actions/index';
 function AddTodo(props) {
   let input;
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!input.value.trim()) {
+      return;
+    }
+    props.dispatch(addTodo(input.value));
+    input.value = '';
+  };
+
   return (
     <div>
       <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          if (!input.value.trim()) {
-            return;
-          }
-          props.dispatch(addTodo(input.value));
-          input.value = '';
-        }}
+        onSubmit={handleSubmit}
       >
         <input
           ref={(node) => {
