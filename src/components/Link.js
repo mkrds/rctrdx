@@ -5,14 +5,15 @@ function Link(props) {
   if (props.active) {
     return <span>{props.children}</span>;
   }
+  const handleClick = (e) => {
+    e.preventDefault();
+    props.onClick();
+  };
 
   return (
     <a
       href="#"
-      onClick={(e) => {
-        e.preventDefault();
-        props.onClick();
-      }}
+      onClick={handleClick}
     >
       {props.children}
     </a>
