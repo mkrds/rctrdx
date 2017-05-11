@@ -5,7 +5,8 @@ import App from './components/App';
 import store from './store/store';
 import './index.css';
 
-
+// Renders whole app
+// 'Provider' makes store available to connect() in the component hierarchy below
 ReactDOM.render(
   <Provider store={store}>
     <App />
