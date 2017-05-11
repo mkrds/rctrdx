@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+//  Presentational component, renders All, Active and Completed buttons
+//  which filter the displayed tasks
 function Link(props) {
   if (props.active) {
     return <span>{props.children}</span>;

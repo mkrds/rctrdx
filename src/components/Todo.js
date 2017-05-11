@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+
+//  Single specific task with toggleTodo action passed as a onTodoClick func.
+//  also 'text' and 'completed' props are passed
 function Todo(props) {
   return (
     <li
